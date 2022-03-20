@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,16 +8,9 @@ import { NavComponent } from './nav/nav.component';
 import { UserModule } from './user/user.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent
-  ],
-  imports: [
-    UserModule,
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, NavComponent],
+  imports: [UserModule, BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
