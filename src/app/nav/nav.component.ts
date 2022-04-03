@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 import { AuthService } from '../servicies/auth.service';
 import { ModalService } from '../servicies/modal.service';
 
@@ -20,9 +21,5 @@ export class NavComponent implements OnInit {
     $event.preventDefault();
 
     this.modalService.toggleModal('auth');
-  }
-  async logout($event: Event) {
-    $event.preventDefault();
-    await this.fireAuth.signOut();
   }
 }
